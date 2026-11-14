@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "SmartInsole",
+    "slug": "smart-insole-mobile",
+    "scheme": "smartinsole",
+    "version": "1.1.0",
+    "platforms": [
+      "android"
+    ],
+    "orientation": "default",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "vn.smartinsole.mobile",
+      "blockedPermissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ],
+      "allowBackup": false
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "react-native-ble-plx",
+        {
+          "isBackgroundEnabled": false,
+          "modes": [
+            "central"
+          ],
+          "neverForLocation": true
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "application": "SmartInsole",
+      "protocol": "BLE v3 / HTTP v2"
+    }
+  }
+}
