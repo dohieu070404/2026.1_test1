@@ -17,7 +17,12 @@
         "android.permission.USE_FINGERPRINT",
         "android.permission.SYSTEM_ALERT_WINDOW"
       ],
-      "allowBackup": false
+      "allowBackup": false,
+      "permissions": [
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT"
+      ]
     },
     "plugins": [
       "expo-secure-store",
@@ -42,7 +47,10 @@
     ],
     "extra": {
       "application": "SmartInsole",
-      "protocol": "BLE v3 / HTTP v2"
+      "protocol": "BLE v3 / HTTP v2",
+      "eas": {
+        "projectId": "0202f139-0fce-4725-8c4d-1ca3bc5c2ead"
+      }
     }
   }
 }
